@@ -1,0 +1,77 @@
+/* ===================================================================
+   PRIMELINE PAINTING & COATINGS — DESIGN TOKENS
+   Source of truth for color, type, spacing, radius, motion.
+   Navy/red sampled via canvas pixel analysis of the live brand logo
+   (static.wixstatic.com/media/7c6ae4_aed1dd9f4e3344f583843a061668a54a~mv2.png),
+   not approximated from screenshots.
+   =================================================================== */
+
+:root {
+  /* COLOR — sampled directly from brand logo pixels */
+  --pl-navy: #0E3055;
+  --pl-navy-dark: #0A2440;
+  --pl-red: #D2152B;
+
+  --pl-white: #FFFFFF;
+  --pl-warm-white: #FAFAF8;
+  --pl-gray-50: #F7F8F8;
+  --pl-gray-100: #F1F3F4;
+  --pl-gray-200: #E4E7E9;
+
+  --pl-slate: #66717D;
+  --pl-charcoal: #20262D;
+  --pl-black: #11171D;
+
+  /* TYPE */
+  --font-primary: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --fs-display-xl: 4.5rem;
+  --fs-display: 4rem;
+  --fs-h1: 3.5rem;
+  --fs-h2: 2.75rem;
+  --fs-h3: 1.875rem;
+  --fs-h4: 1.375rem;
+  --fs-body-lg: 1.4rem;
+  --fs-body: 1.3rem;
+  --fs-body-sm: 1.125rem;
+  --fs-eyebrow: 0.8125rem;
+  --fs-button: 0.875rem;
+
+  /* SPACING — 8px base */
+  --sp-4: 0.25rem;
+  --sp-8: 0.5rem;
+  --sp-12: 0.75rem;
+  --sp-16: 1rem;
+  --sp-24: 1.5rem;
+  --sp-32: 2rem;
+  --sp-40: 2.5rem;
+  --sp-48: 3rem;
+  --sp-64: 4rem;
+  --sp-80: 5rem;
+  --sp-96: 6rem;
+  --sp-120: 7.5rem;
+  --sp-144: 9rem;
+
+  /* LAYOUT */
+  --content-max: 1240px;
+  --pad-mobile: 20px;
+  --pad-tablet: 28px;
+  --pad-desktop: 32px;
+
+  /* RADIUS */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+
+  /* BORDERS */
+  --border-default: 1px solid var(--pl-gray-200);
+  --border-dark: 1px solid rgba(255,255,255,.15);
+
+  /* SHADOW */
+  --shadow-default: 0 8px 30px rgba(17, 23, 29, 0.06);
+
+  /* MOTION */
+  --transition-fast: 150ms ease;
+  --transition-default: 200ms ease;
+  --transition-slow: 300ms ease;
+}

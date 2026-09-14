@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | PrimeLine Painting & Coatings | San Diego</title>
+<meta name="description" content="Request a free painting estimate from PrimeLine Painting & Coatings in San Diego. Call (858) 650-9640 or send us your project details.">
+<link rel="canonical" href="https://www.primelinepc.com/contact.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<style>
+  .contact-form { display: flex; flex-direction: column; gap: var(--sp-24); max-width: 640px; }
+  .form-field { display: flex; flex-direction: column; gap: var(--sp-8); }
+  .form-field label { font-weight: 600; font-size: var(--fs-body-sm); color: var(--pl-charcoal); }
+  .form-field input, .form-field select, .form-field textarea {
+    height: 54px;
+    padding: 0 var(--sp-16);
+    border: 1px solid var(--pl-gray-200);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-primary);
+    font-size: var(--fs-body-sm);
+    color: var(--pl-charcoal);
+    background: var(--pl-white);
+  }
+  .form-field textarea { height: auto; padding: var(--sp-16); min-height: 140px; resize: vertical; }
+  .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+    outline: none;
+    border-color: var(--pl-navy);
+  }
+  .form-row { display: grid; grid-template-columns: 1fr; gap: var(--sp-24); }
+  @media (min-width: 640px) { .form-row--2 { grid-template-columns: 1fr 1fr; } }
+  .contact-info-list { display: flex; flex-direction: column; gap: var(--sp-24); margin-top: var(--sp-32); }
+  .contact-info-item h4 { margin-bottom: var(--sp-4); }
+  .form-status { display: none; padding: var(--sp-16); border-radius: var(--radius-sm); font-weight: 600; }
+  .form-status.is-success { display: block; background: var(--pl-gray-100); color: var(--pl-navy); }
+  .form-status.is-error { display: block; background: rgba(210,21,43,0.08); color: var(--pl-red); }
+  .contact-form.is-submitting .btn { opacity: 0.6; pointer-events: none; }
+</style>
+</head>
+<body class="has-mobile-cta">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="index.html" class="site-header__logo" aria-label="PrimeLine Painting & Coatings home">
+      <img src="assets/images/logo.png" alt="PrimeLine Painting & Coatings">
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="our-work.html">Our Work</a>
+      <a href="why-primeline.html">Why PrimeLine</a>
+      <a href="about.html">About</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+    <div class="site-header__actions">
+      <a href="tel:+18586509640" class="site-header__phone">(858) 650-9640</a>
+      <a href="contact.html" class="btn btn--primary">Get a Free Estimate</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="our-work.html">Our Work</a>
+  <a href="why-primeline.html">Why PrimeLine</a>
+  <a href="about.html">About</a>
+  <a href="faq.html">FAQ</a>
+  <a href="contact.html" class="btn btn--primary">Get a Free Estimate</a>
+  <a href="tel:+18586509640">(858) 650-9640</a>
+</div>
+
+<main id="main">
+
+  <section class="section bg-warm-white" style="padding-block: var(--sp-64)">
+    <div class="container" style="max-width: 720px">
+      <span class="eyebrow">Contact</span>
+      <h1 style="margin-top: var(--sp-16)">LET'S TALK ABOUT YOUR PROJECT.</h1>
+      <p class="body-lg" style="margin-top: var(--sp-24); color: var(--pl-slate)">Tell us a little about your project and we'll help you determine the next steps.</p>
+    </div>
+  </section>
+
+  <section class="section bg-white">
+    <div class="container split split--60-40">
+      <div class="reveal">
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/xgaeglvr" method="POST">
+          <div class="form-row form-row--2">
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-field">
+            <label for="address">Project Address</label>
+            <input type="text" id="address" name="address">
+          </div>
+          <div class="form-row form-row--2">
+            <div class="form-field">
+              <label for="project-type">Project Type</label>
+              <select id="project-type" name="project_type">
+                <option value="">Select a service</option>
+                <option>Exterior Painting</option>
+                <option>Interior Painting</option>
+                <option>Cabinet Painting</option>
+                <option>Commercial Coatings</option>
+                <option>Pressure Washing</option>
+                <option>Wood Deck Staining</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="timeline">Desired Timeline</label>
+              <select id="timeline" name="timeline">
+                <option value="">Select a timeline</option>
+                <option>As soon as possible</option>
+                <option>Within 1 month</option>
+                <option>1–3 months</option>
+                <option>Just researching</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="details">Project Details</label>
+            <textarea id="details" name="details" placeholder="Tell us about your project..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary" style="align-self:flex-start">Send Message <span class="arrow">→</span></button>
+          <div class="form-status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+      <div class="reveal">
+        <h3>Contact Information</h3>
+        <div class="contact-info-list">
+          <div class="contact-info-item">
+            <h4>Phone</h4>
+            <a href="tel:+18586509640" style="color:var(--pl-slate)">(858) 650-9640</a>
+          </div>
+          <div class="contact-info-item">
+            <h4>Email</h4>
+            <a href="mailto:luis@primelinepc.com" style="color:var(--pl-slate)">luis@primelinepc.com</a>
+          </div>
+          <div class="contact-info-item">
+            <h4>Location</h4>
+            <p style="color:var(--pl-slate)">San Diego, CA</p>
+          </div>
+        </div>
+        <a href="http://primelinepaintingandcoatings.dripjobs.com" class="btn btn--secondary" style="margin-top:var(--sp-32)" target="_blank" rel="noopener">Or Request an Estimate Online <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div>
+      <div class="site-footer__logo"><img src="assets/images/logo.png" alt="PrimeLine Painting & Coatings"></div>
+      <p>Professional residential and commercial painting services in San Diego.</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul>
+        <li><a href="services/exterior-painting.html">Exterior Painting</a></li>
+        <li><a href="services/interior-painting.html">Interior Painting</a></li>
+        <li><a href="services/cabinet-painting.html">Cabinet Painting</a></li>
+        <li><a href="services/commercial-coatings.html">Commercial Coatings</a></li>
+        <li><a href="services/pressure-washing.html">Pressure Washing</a></li>
+        <li><a href="services/deck-staining.html">Deck Staining</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="why-primeline.html">Why PrimeLine</a></li>
+        <li><a href="our-work.html">Our Work</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li>San Diego, CA</li>
+        <li><a href="tel:+18586509640">(858) 650-9640</a></li>
+        <li><a href="mailto:luis@primelinepc.com">luis@primelinepc.com</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn--primary" style="margin-top:var(--sp-16)">Get a Free Estimate</a>
+    </div>
+  </div>
+  <div class="container site-footer__bottom">
+    <span>&copy; 2026 PrimeLine Painting &amp; Coatings. All rights reserved.</span>
+  </div>
+</footer>
+
+<div class="mobile-cta-bar">
+  <a href="tel:+18586509640">Call</a>
+  <a href="contact.html">Free Estimate</a>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

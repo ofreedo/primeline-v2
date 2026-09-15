@@ -217,6 +217,69 @@
 }
 .site-nav a:hover, .site-nav a.is-active { color: var(--pl-red); }
 
+/* Services dropdown (desktop) */
+.site-nav__item--dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+/* Invisible bridge over the gap between trigger and panel, so the cursor
+   never leaves a hovered element while moving down into the dropdown. */
+.site-nav__item--dropdown::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  width: 220px;
+  height: 20px;
+}
+.site-nav__trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.site-nav__trigger svg {
+  width: 12px;
+  height: 12px;
+  transition: transform var(--transition-default);
+}
+.site-nav__item--dropdown:hover .site-nav__trigger svg,
+.site-nav__item--dropdown:focus-within .site-nav__trigger svg {
+  transform: rotate(180deg);
+}
+.site-nav__dropdown {
+  position: absolute;
+  top: calc(100% + 20px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  min-width: 220px;
+  background: var(--pl-white);
+  border: var(--border-default);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-default);
+  padding: var(--sp-8);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--transition-default), transform var(--transition-default), visibility var(--transition-default);
+}
+.site-nav__item--dropdown:hover .site-nav__dropdown,
+.site-nav__item--dropdown:focus-within .site-nav__dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+.site-nav__dropdown a {
+  display: block;
+  padding: var(--sp-8) var(--sp-12);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  white-space: nowrap;
+}
+.site-nav__dropdown a:hover { background: var(--pl-gray-50); }
+
 .site-header__actions {
   display: flex;
   align-items: center;
@@ -254,6 +317,46 @@
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--pl-navy);
+}
+
+/* Services accordion (mobile) */
+.mobile-menu__item--dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-24);
+}
+.mobile-menu__trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--pl-navy);
+}
+.mobile-menu__trigger svg {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--transition-default);
+}
+.mobile-menu__trigger[aria-expanded="true"] svg { transform: rotate(180deg); }
+.mobile-menu__sublist {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-20);
+  padding-left: var(--sp-16);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-slow);
+}
+.mobile-menu__sublist a {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--pl-slate);
 }
 
 /* ---------- MOBILE BOTTOM CTA BAR ---------- */
